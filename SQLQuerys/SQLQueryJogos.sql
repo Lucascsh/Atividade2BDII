@@ -3,25 +3,25 @@
 --select * from sys.sql_logins -- lista usuarios
 --select * from sys.sysprocesses where loginame = 'Juca' -- acompanhar o usuario
 
---grant select on disciplinas to username -- permiss„o para o usu·rio consultar disciplinas
+--grant select on disciplinas to username -- permiss√£o para o usu√°rio consultar disciplinas
 --revoke select on disciplinas to username
 --deny select on disciplinas to username
 
--- CriaÁ„o da base de dados
+-- Cria√ß√£o da base de dados
 --create database db_jogos;
 go
 
--- CriaÁ„o do login super, ser· usado para criar o usu·rio, poder· ver todos os bancos e suas tabelas
+-- Cria√ß√£o do login super, ser√° usado para criar o usu√°rio, poder√° ver todos os bancos e suas tabelas
 create login super with password = '123456',
-	default_database = db_jogos, check_expiration = off,
+	default_database = db_master, check_expiration = off,
 	check_policy = off
 	go
 
--- CriaÁ„o do usu·rio a partir dos login
+-- Cria√ß√£o do usu√°rio a partir dos login
 create user Dejair for login super;
 go
 
--- CriaÁ„o das tabela
+-- Cria√ß√£o das tabela
 create table jogos
 (
 	id integer primary key identity,
