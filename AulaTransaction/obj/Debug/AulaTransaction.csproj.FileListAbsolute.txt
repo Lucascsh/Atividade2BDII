@@ -20,3 +20,14 @@ C:\Users\laboratorio\Desktop\AulaTransactionAulaFinal\AulaTransaction\obj\Debug\
 C:\Users\laboratorio\Desktop\AulaTransactionAulaFinal\AulaTransaction\bin\Debug\AulaTransaction.exe.config
 C:\Users\laboratorio\Desktop\AulaTransactionAulaFinal\AulaTransaction\bin\Debug\AulaTransaction.exe
 C:\Users\laboratorio\Desktop\AulaTransactionAulaFinal\AulaTransaction\bin\Debug\AulaTransaction.pdb
+C:\Users\laboratorio\Downloads\Atividade2BDII-main\AulaTransaction\bin\Debug\AulaTransaction.exe.config
+C:\Users\laboratorio\Downloads\Atividade2BDII-main\AulaTransaction\bin\Debug\AulaTransaction.exe
+C:\Users\laboratorio\Downloads\Atividade2BDII-main\AulaTransaction\bin\Debug\AulaTransaction.pdb
+C:\Users\laboratorio\Downloads\Atividade2BDII-main\AulaTransaction\obj\Debug\AulaTransaction.csproj.AssemblyReference.cache
+C:\Users\laboratorio\Downloads\Atividade2BDII-main\AulaTransaction\obj\Debug\AulaTransaction.csproj.SuggestedBindingRedirects.cache
+C:\Users\laboratorio\Downloads\Atividade2BDII-main\AulaTransaction\obj\Debug\AulaTransaction.Form1.resources
+C:\Users\laboratorio\Downloads\Atividade2BDII-main\AulaTransaction\obj\Debug\AulaTransaction.Properties.Resources.resources
+C:\Users\laboratorio\Downloads\Atividade2BDII-main\AulaTransaction\obj\Debug\AulaTransaction.csproj.GenerateResource.cache
+C:\Users\laboratorio\Downloads\Atividade2BDII-main\AulaTransaction\obj\Debug\AulaTransaction.csproj.CoreCompileInputs.cache
+C:\Users\laboratorio\Downloads\Atividade2BDII-main\AulaTransaction\obj\Debug\AulaTransaction.exe
+C:\Users\laboratorio\Downloads\Atividade2BDII-main\AulaTransaction\obj\Debug\AulaTransaction.pdb

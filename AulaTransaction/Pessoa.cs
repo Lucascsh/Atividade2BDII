@@ -10,11 +10,8 @@ namespace AulaTransaction
 {
     internal class Pessoa
     {
-        public int id;
-        public string nome;
-        public int idade;
-        public int altura;
 
+        /*
         public bool gravar()
         {
             Banco bd = new Banco();
@@ -51,6 +48,6 @@ namespace AulaTransaction
                 bd.fecharConexao();
             }
 
-        }
+        }*/
     }
 }

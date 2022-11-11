@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-
+using System.Windows.Forms;
 
 namespace AulaTransaction
 {
@@ -38,7 +38,6 @@ namespace AulaTransaction
 
         private void conexao()
         {
-            
             cn = new SqlConnection(conec);
         }
 
@@ -93,6 +92,7 @@ namespace AulaTransaction
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Erro" + ex.Message);
                 return null;
             }
             finally

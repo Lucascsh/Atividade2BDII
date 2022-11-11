@@ -1,0 +1,11 @@
+C:\Users\laboratorio\Downloads\Atividade2BDII-main\AulaTransaction\bin\Release\AulaTransaction.exe.config
+C:\Users\laboratorio\Downloads\Atividade2BDII-main\AulaTransaction\bin\Release\AulaTransaction.exe
+C:\Users\laboratorio\Downloads\Atividade2BDII-main\AulaTransaction\bin\Release\AulaTransaction.pdb
+C:\Users\laboratorio\Downloads\Atividade2BDII-main\AulaTransaction\obj\Release\AulaTransaction.csproj.AssemblyReference.cache
+C:\Users\laboratorio\Downloads\Atividade2BDII-main\AulaTransaction\obj\Release\AulaTransaction.csproj.SuggestedBindingRedirects.cache
+C:\Users\laboratorio\Downloads\Atividade2BDII-main\AulaTransaction\obj\Release\AulaTransaction.Form1.resources
+C:\Users\laboratorio\Downloads\Atividade2BDII-main\AulaTransaction\obj\Release\AulaTransaction.Properties.Resources.resources
+C:\Users\laboratorio\Downloads\Atividade2BDII-main\AulaTransaction\obj\Release\AulaTransaction.csproj.GenerateResource.cache
+C:\Users\laboratorio\Downloads\Atividade2BDII-main\AulaTransaction\obj\Release\AulaTransaction.csproj.CoreCompileInputs.cache
+C:\Users\laboratorio\Downloads\Atividade2BDII-main\AulaTransaction\obj\Release\AulaTransaction.exe
+C:\Users\laboratorio\Downloads\Atividade2BDII-main\AulaTransaction\obj\Release\AulaTransaction.pdb

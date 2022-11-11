@@ -31,7 +31,7 @@
             this.tBUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tBSenha = new System.Windows.Forms.TextBox();
             this.bLogin = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.bConsultar = new System.Windows.Forms.Button();
@@ -44,6 +44,7 @@
             this.tBUsuario.Name = "tBUsuario";
             this.tBUsuario.Size = new System.Drawing.Size(100, 20);
             this.tBUsuario.TabIndex = 0;
+            this.tBUsuario.TextChanged += new System.EventHandler(this.tBUsuario_TextChanged);
             // 
             // label1
             // 
@@ -63,12 +64,13 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Senha";
             // 
-            // textBox2
+            // tBSenha
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 114);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 2;
+            this.tBSenha.Location = new System.Drawing.Point(12, 114);
+            this.tBSenha.Name = "tBSenha";
+            this.tBSenha.Size = new System.Drawing.Size(100, 20);
+            this.tBSenha.TabIndex = 2;
+            this.tBSenha.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // bLogin
             // 
@@ -110,7 +112,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.bLogin);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tBSenha);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tBUsuario);
             this.Name = "Form1";
@@ -126,7 +128,7 @@
         private System.Windows.Forms.TextBox tBUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tBSenha;
         private System.Windows.Forms.Button bLogin;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button bConsultar;
