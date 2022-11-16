@@ -13,7 +13,7 @@ go
 
 -- Criação do login super, será usado para criar o usuário, poderá ver todos os bancos e suas tabelas
 create login super with password = '123456',
-	default_database = db_master, check_expiration = off,
+	default_database = master, check_expiration = off,
 	check_policy = off
 	go
 
