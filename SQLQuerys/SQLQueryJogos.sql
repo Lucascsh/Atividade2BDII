@@ -7,6 +7,8 @@
 --revoke select on disciplinas to username
 --deny select on disciplinas to username
 
+--SELECT table_catalog, table_schema, table_name, table_type FROM information_schema.tables;
+
 -- Criação da base de dados
 --create database db_jogos;
 go
