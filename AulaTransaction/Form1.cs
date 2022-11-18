@@ -17,14 +17,14 @@ namespace AulaTransaction
         public Form1()
         {
             InitializeComponent();
-            //bConsultar.Enabled = false;
+            bConsultar.Enabled = false;
         }
 
         private void bLogin_Click(object sender, EventArgs e)
         {
             Banco bd = new Banco();
 
-            stringConec = "Data Source=localhost;" +
+            stringConec = "Data Source=" + tBServidor.Text + ";" +
             "Initial Catalog=master;" +
             "User ID=" + tBUsuario.Text + ";" +
             "password=" + tBSenha.Text + ";" +
@@ -42,6 +42,7 @@ namespace AulaTransaction
                 {
                     MessageBox.Show("Conectado com Sucesso.");
                 }
+                bConsultar.Enabled = true;
 
             }
             catch (Exception ex)
@@ -53,12 +54,8 @@ namespace AulaTransaction
                 bd.fecharConexao();
             }
         }
-        public string getStringConec()
-        {
-            return stringConec;
-        }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             Banco bd = new Banco();
 
@@ -70,12 +67,6 @@ namespace AulaTransaction
                 {
                     MessageBox.Show("Erro ao conectar com o banco!");
                 }
-                /*
-                else
-                {
-                    MessageBox.Show("Conectado com Sucesso.");
-                }
-                */
 
             }
             catch (Exception ex)
@@ -102,52 +93,6 @@ namespace AulaTransaction
 
         }
 
-        private void bBancos_Click(object sender, EventArgs e)
-        {
-            //Banco bd = new Banco();
-
-            ////A string de conexão está conectando no banco master, precisa ser dinâmico
-
-            //stringConec = "Data Source=localhost;" +
-            //"Initial Catalog=" + tBBanco.Text + ";" +
-            //"User ID=" + tBUsuario.Text + ";" +
-            //"password=" + tBSenha.Text + ";" +
-            //"language=Portuguese";
-
-            //try
-            //{
-            //    bd.setConec(stringConec);
-            //    SqlConnection cn = bd.abrirConexao();
-            //    if (cn == null)
-            //    {
-            //        MessageBox.Show("Erro ao conectar com o banco!");
-            //    }
-            //    /*
-            //    else
-            //    {
-            //        MessageBox.Show("Conectado com Sucesso.");
-            //    }
-            //    */
-
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Erro ao conectar com o banco: " + ex.Message);
-            //}
-
-            //DataTable dt = new DataTable();
-
-            //dt = bd.executaConsulta("SELECT table_catalog, table_name FROM information_schema.tables;");
-
-            //dataGridView1.DataSource = dt;
-
-            //bd.fecharConexao();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -155,9 +100,7 @@ namespace AulaTransaction
             {
                 Banco bd = new Banco();
 
-                //A string de conexão está conectando no banco master, precisa ser dinâmico
-
-                stringConec = "Data Source=localhost;" +
+                stringConec = "Data Source=" + tBServidor.Text + ";" +
                 "Initial Catalog=" + dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() + ";" +
                 "User ID=" + tBUsuario.Text + ";" +
                 "password=" + tBSenha.Text + ";" +
@@ -171,13 +114,6 @@ namespace AulaTransaction
                     {
                         MessageBox.Show("Erro ao conectar com o banco!");
                     }
-                    /*
-                    else
-                    {
-                        MessageBox.Show("Conectado com Sucesso.");
-                    }
-                    */
-
                 }
                 catch (Exception ex)
                 {
@@ -193,49 +129,44 @@ namespace AulaTransaction
                 bd.fecharConexao();
             }
         }
+
+        private void tBServidor_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
+        private void bCriarUsuario_Click(object sender, EventArgs e)
+        {
+            stringConec = "Data Source=" + tBServidor.Text + ";" +
+            "Initial Catalog="+ tBBancoCriar +";" +
+            "User ID=" + tBUsuarioCriar.Text + ";" +
+            "password=" + tBSenhaCriar.Text + ";" +
+            "language=Portuguese";
 
-        //private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    Banco bd = new Banco();
+            Banco bd = new Banco();
 
-        //    //A string de conexão está conectando no banco master, precisa ser dinâmico
+            try
+            {
+                bd.setConec(stringConec);
+                SqlConnection cn = bd.abrirConexao();
+                if (cn == null)
+                {
+                    MessageBox.Show("Erro ao conectar com o banco!");
+                }
 
-        //    stringConec = "Data Source=localhost;" +
-        //    "Initial Catalog=" + tBBanco.Text + ";" +
-        //    "User ID=" + tBUsuario.Text + ";" +
-        //    "password=" + tBSenha.Text + ";" +
-        //    "language=Portuguese";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao conectar com o banco: " + ex.Message);
+            }
 
-        //    try
-        //    {
-        //        bd.setConec(stringConec);
-        //        SqlConnection cn = bd.abrirConexao();
-        //        if (cn == null)
-        //        {
-        //            MessageBox.Show("Erro ao conectar com o banco!");
-        //        }
-        //        /*
-        //        else
-        //        {
-        //            MessageBox.Show("Conectado com Sucesso.");
-        //        }
-        //        */
+            DataTable dt = new DataTable();
 
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Erro ao conectar com o banco: " + ex.Message);
-        //    }
+            dt = bd.executaConsulta("select name, database_id, create_date from sys.databases;");
 
-        //    DataTable dt = new DataTable();
+            dataGridView1.DataSource = dt;
 
-        //    dt = bd.executaConsulta("SELECT table_catalog, table_name FROM information_schema.tables;");
-
-        //    dataGridView1.DataSource = dt;
-
-        //    bd.fecharConexao();
-        //}
-    //}
+            bd.fecharConexao();
+        }
+    }
 }

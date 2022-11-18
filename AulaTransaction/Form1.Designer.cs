@@ -35,20 +35,22 @@
             this.bLogin = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.bConsultar = new System.Windows.Forms.Button();
-            this.tBBanco = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.bBancos = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tBUsuarioCriar = new System.Windows.Forms.TextBox();
+            this.tBSenhaCriar = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.bCriarUsuario = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tBServidor = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tBBancoCriar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tBUsuario
             // 
-            this.tBUsuario.Location = new System.Drawing.Point(12, 28);
+            this.tBUsuario.Location = new System.Drawing.Point(12, 83);
             this.tBUsuario.Name = "tBUsuario";
             this.tBUsuario.Size = new System.Drawing.Size(118, 20);
             this.tBUsuario.TabIndex = 0;
@@ -58,7 +60,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 12);
+            this.label1.Location = new System.Drawing.Point(9, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 1;
@@ -67,7 +69,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 51);
+            this.label2.Location = new System.Drawing.Point(12, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 3;
@@ -75,7 +77,7 @@
             // 
             // tBSenha
             // 
-            this.tBSenha.Location = new System.Drawing.Point(12, 67);
+            this.tBSenha.Location = new System.Drawing.Point(12, 131);
             this.tBSenha.Name = "tBSenha";
             this.tBSenha.Size = new System.Drawing.Size(118, 20);
             this.tBSenha.TabIndex = 2;
@@ -84,7 +86,7 @@
             // 
             // bLogin
             // 
-            this.bLogin.Location = new System.Drawing.Point(11, 111);
+            this.bLogin.Location = new System.Drawing.Point(11, 157);
             this.bLogin.Name = "bLogin";
             this.bLogin.Size = new System.Drawing.Size(75, 23);
             this.bLogin.TabIndex = 6;
@@ -106,53 +108,27 @@
             // 
             // bConsultar
             // 
-            this.bConsultar.Location = new System.Drawing.Point(11, 140);
+            this.bConsultar.Location = new System.Drawing.Point(11, 198);
             this.bConsultar.Name = "bConsultar";
             this.bConsultar.Size = new System.Drawing.Size(88, 38);
             this.bConsultar.TabIndex = 8;
             this.bConsultar.Text = "Listar bases de dados";
             this.bConsultar.UseVisualStyleBackColor = true;
-            this.bConsultar.Click += new System.EventHandler(this.button2_Click);
+            this.bConsultar.Click += new System.EventHandler(this.Button2_Click);
             // 
-            // tBBanco
+            // tBUsuarioCriar
             // 
-            this.tBBanco.Location = new System.Drawing.Point(11, 224);
-            this.tBBanco.Name = "tBBanco";
-            this.tBBanco.Size = new System.Drawing.Size(100, 20);
-            this.tBBanco.TabIndex = 9;
+            this.tBUsuarioCriar.Location = new System.Drawing.Point(704, 28);
+            this.tBUsuarioCriar.Name = "tBUsuarioCriar";
+            this.tBUsuarioCriar.Size = new System.Drawing.Size(100, 20);
+            this.tBUsuarioCriar.TabIndex = 12;
             // 
-            // label3
+            // tBSenhaCriar
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 208);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 13);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Nome do banco";
-            // 
-            // bBancos
-            // 
-            this.bBancos.Location = new System.Drawing.Point(11, 251);
-            this.bBancos.Name = "bBancos";
-            this.bBancos.Size = new System.Drawing.Size(81, 23);
-            this.bBancos.TabIndex = 11;
-            this.bBancos.Text = "Listar tabelas";
-            this.bBancos.UseVisualStyleBackColor = true;
-            this.bBancos.Click += new System.EventHandler(this.bBancos_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(704, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 12;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(704, 67);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 13;
+            this.tBSenhaCriar.Location = new System.Drawing.Point(704, 67);
+            this.tBSenhaCriar.Name = "tBSenhaCriar";
+            this.tBSenhaCriar.Size = new System.Drawing.Size(100, 20);
+            this.tBSenhaCriar.TabIndex = 13;
             // 
             // label4
             // 
@@ -174,27 +150,70 @@
             // 
             // bCriarUsuario
             // 
-            this.bCriarUsuario.Location = new System.Drawing.Point(704, 110);
+            this.bCriarUsuario.Location = new System.Drawing.Point(704, 140);
             this.bCriarUsuario.Name = "bCriarUsuario";
             this.bCriarUsuario.Size = new System.Drawing.Size(75, 23);
             this.bCriarUsuario.TabIndex = 16;
             this.bCriarUsuario.Text = "Criar usuário";
             this.bCriarUsuario.UseVisualStyleBackColor = true;
-            this.bCriarUsuario.Click += new System.EventHandler(this.button1_Click);
+            this.bCriarUsuario.Click += new System.EventHandler(this.bCriarUsuario_Click);
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 23);
+            this.label6.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 10);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(46, 13);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Servidor";
+            // 
+            // tBServidor
+            // 
+            this.tBServidor.Location = new System.Drawing.Point(12, 26);
+            this.tBServidor.Name = "tBServidor";
+            this.tBServidor.Size = new System.Drawing.Size(100, 20);
+            this.tBServidor.TabIndex = 18;
+            this.tBServidor.Text = "localhost";
+            this.tBServidor.TextChanged += new System.EventHandler(this.tBServidor_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(701, 90);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(87, 13);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Banco de Dados";
+            // 
+            // tBBancoCriar
+            // 
+            this.tBBancoCriar.Location = new System.Drawing.Point(704, 106);
+            this.tBBancoCriar.Name = "tBBancoCriar";
+            this.tBBancoCriar.Size = new System.Drawing.Size(100, 20);
+            this.tBBancoCriar.TabIndex = 20;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 384);
+            this.Controls.Add(this.tBBancoCriar);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.tBServidor);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.bCriarUsuario);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.bBancos);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.tBBanco);
+            this.Controls.Add(this.tBSenhaCriar);
+            this.Controls.Add(this.tBUsuarioCriar);
             this.Controls.Add(this.bConsultar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.bLogin);
@@ -222,14 +241,16 @@
         private System.Windows.Forms.Button bLogin;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button bConsultar;
-        private System.Windows.Forms.TextBox tBBanco;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button bBancos;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tBUsuarioCriar;
+        private System.Windows.Forms.TextBox tBSenhaCriar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button bCriarUsuario;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox tBServidor;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox tBBancoCriar;
     }
 }
 
