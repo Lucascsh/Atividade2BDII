@@ -35,7 +35,7 @@
             this.bLogin = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.bConsultar = new System.Windows.Forms.Button();
-            this.tBUsuarioCriar = new System.Windows.Forms.TextBox();
+            this.tBLoginCriar = new System.Windows.Forms.TextBox();
             this.tBSenhaCriar = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,22 +45,26 @@
             this.tBServidor = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tBBancoCriar = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tBUsuarioCriar = new System.Windows.Forms.TextBox();
+            this.bCriarLogin = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tBVinculaLogin = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tBUsuario
             // 
-            this.tBUsuario.Location = new System.Drawing.Point(12, 83);
+            this.tBUsuario.Location = new System.Drawing.Point(12, 67);
             this.tBUsuario.Name = "tBUsuario";
             this.tBUsuario.Size = new System.Drawing.Size(118, 20);
             this.tBUsuario.TabIndex = 0;
             this.tBUsuario.Text = "super";
-            this.tBUsuario.TextChanged += new System.EventHandler(this.tBUsuario_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 67);
+            this.label1.Location = new System.Drawing.Point(9, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 1;
@@ -69,7 +73,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 115);
+            this.label2.Location = new System.Drawing.Point(11, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 3;
@@ -77,7 +81,7 @@
             // 
             // tBSenha
             // 
-            this.tBSenha.Location = new System.Drawing.Point(12, 131);
+            this.tBSenha.Location = new System.Drawing.Point(11, 106);
             this.tBSenha.Name = "tBSenha";
             this.tBSenha.Size = new System.Drawing.Size(118, 20);
             this.tBSenha.TabIndex = 2;
@@ -102,7 +106,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(161, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(509, 360);
+            this.dataGridView1.Size = new System.Drawing.Size(380, 360);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -116,41 +120,45 @@
             this.bConsultar.UseVisualStyleBackColor = true;
             this.bConsultar.Click += new System.EventHandler(this.Button2_Click);
             // 
-            // tBUsuarioCriar
+            // tBLoginCriar
             // 
-            this.tBUsuarioCriar.Location = new System.Drawing.Point(704, 28);
-            this.tBUsuarioCriar.Name = "tBUsuarioCriar";
-            this.tBUsuarioCriar.Size = new System.Drawing.Size(100, 20);
-            this.tBUsuarioCriar.TabIndex = 12;
+            this.tBLoginCriar.Location = new System.Drawing.Point(579, 26);
+            this.tBLoginCriar.Name = "tBLoginCriar";
+            this.tBLoginCriar.Size = new System.Drawing.Size(100, 20);
+            this.tBLoginCriar.TabIndex = 12;
+            this.tBLoginCriar.TextChanged += new System.EventHandler(this.tBLoginCriar_TextChanged);
             // 
             // tBSenhaCriar
             // 
-            this.tBSenhaCriar.Location = new System.Drawing.Point(704, 67);
+            this.tBSenhaCriar.Location = new System.Drawing.Point(579, 65);
             this.tBSenhaCriar.Name = "tBSenhaCriar";
             this.tBSenhaCriar.Size = new System.Drawing.Size(100, 20);
             this.tBSenhaCriar.TabIndex = 13;
+            this.tBSenhaCriar.TextChanged += new System.EventHandler(this.tBSenhaCriar_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(701, 12);
+            this.label4.Location = new System.Drawing.Point(576, 10);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 13);
+            this.label4.Size = new System.Drawing.Size(59, 13);
             this.label4.TabIndex = 14;
-            this.label4.Text = "Usuário(criar)";
+            this.label4.Text = "Login(criar)";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(701, 51);
+            this.label5.Location = new System.Drawing.Point(576, 49);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 15;
             this.label5.Text = "Senha";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // bCriarUsuario
             // 
-            this.bCriarUsuario.Location = new System.Drawing.Point(704, 140);
+            this.bCriarUsuario.Location = new System.Drawing.Point(576, 256);
             this.bCriarUsuario.Name = "bCriarUsuario";
             this.bCriarUsuario.Size = new System.Drawing.Size(75, 23);
             this.bCriarUsuario.TabIndex = 16;
@@ -178,7 +186,7 @@
             // 
             this.tBServidor.Location = new System.Drawing.Point(12, 26);
             this.tBServidor.Name = "tBServidor";
-            this.tBServidor.Size = new System.Drawing.Size(100, 20);
+            this.tBServidor.Size = new System.Drawing.Size(118, 20);
             this.tBServidor.TabIndex = 18;
             this.tBServidor.Text = "localhost";
             this.tBServidor.TextChanged += new System.EventHandler(this.tBServidor_TextChanged);
@@ -186,7 +194,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(701, 90);
+            this.label3.Location = new System.Drawing.Point(570, 136);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 13);
             this.label3.TabIndex = 19;
@@ -194,16 +202,64 @@
             // 
             // tBBancoCriar
             // 
-            this.tBBancoCriar.Location = new System.Drawing.Point(704, 106);
+            this.tBBancoCriar.Location = new System.Drawing.Point(573, 152);
             this.tBBancoCriar.Name = "tBBancoCriar";
             this.tBBancoCriar.Size = new System.Drawing.Size(100, 20);
             this.tBBancoCriar.TabIndex = 20;
+            this.tBBancoCriar.Text = "db_jogos";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(573, 175);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(69, 13);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Usuário(criar)";
+            // 
+            // tBUsuarioCriar
+            // 
+            this.tBUsuarioCriar.Location = new System.Drawing.Point(573, 191);
+            this.tBUsuarioCriar.Name = "tBUsuarioCriar";
+            this.tBUsuarioCriar.Size = new System.Drawing.Size(100, 20);
+            this.tBUsuarioCriar.TabIndex = 22;
+            // 
+            // bCriarLogin
+            // 
+            this.bCriarLogin.Location = new System.Drawing.Point(576, 91);
+            this.bCriarLogin.Name = "bCriarLogin";
+            this.bCriarLogin.Size = new System.Drawing.Size(72, 23);
+            this.bCriarLogin.TabIndex = 23;
+            this.bCriarLogin.Text = "Criar Login";
+            this.bCriarLogin.UseVisualStyleBackColor = true;
+            this.bCriarLogin.Click += new System.EventHandler(this.bCriarLogin_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(573, 214);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(83, 13);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Login Vinculado";
+            // 
+            // tBVinculaLogin
+            // 
+            this.tBVinculaLogin.Location = new System.Drawing.Point(576, 230);
+            this.tBVinculaLogin.Name = "tBVinculaLogin";
+            this.tBVinculaLogin.Size = new System.Drawing.Size(97, 20);
+            this.tBVinculaLogin.TabIndex = 25;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(889, 384);
+            this.ClientSize = new System.Drawing.Size(722, 384);
+            this.Controls.Add(this.tBVinculaLogin);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.bCriarLogin);
+            this.Controls.Add(this.tBUsuarioCriar);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.tBBancoCriar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tBServidor);
@@ -213,7 +269,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tBSenhaCriar);
-            this.Controls.Add(this.tBUsuarioCriar);
+            this.Controls.Add(this.tBLoginCriar);
             this.Controls.Add(this.bConsultar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.bLogin);
@@ -241,7 +297,7 @@
         private System.Windows.Forms.Button bLogin;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button bConsultar;
-        private System.Windows.Forms.TextBox tBUsuarioCriar;
+        private System.Windows.Forms.TextBox tBLoginCriar;
         private System.Windows.Forms.TextBox tBSenhaCriar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -251,6 +307,11 @@
         private System.Windows.Forms.TextBox tBServidor;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tBBancoCriar;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tBUsuarioCriar;
+        private System.Windows.Forms.Button bCriarLogin;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox tBVinculaLogin;
     }
 }
 

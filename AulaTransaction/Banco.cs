@@ -22,17 +22,13 @@ namespace AulaTransaction
             exec sp_addrolemember 'DB_DATAREADER', 'usuario';
             exec sp_addrolemember 'DB_DATAWRITER', 'usuario'
          */
-        private string usuario = "";
+
         private string conec = "";
         public void setConec(string conec)
         {
             this.conec = conec;
         }
 
-        public void setUsuario(string usuario)
-        {
-            this.usuario = usuario;
-        }
         //ADO.Net
         private SqlConnection cn; 
 
@@ -92,7 +88,7 @@ namespace AulaTransaction
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro" + ex.Message);
+                MessageBox.Show("Erro: " + ex.Message);
                 return null;
             }
             finally
