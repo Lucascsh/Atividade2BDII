@@ -14,6 +14,7 @@
 go
 
 -- Criação do login super, será usado para criar o usuário, poderá ver todos os bancos e suas tabelas
+-- Lembre de marcar o usuário como sysadmin no banco
 create login super with password = '123456',
 	default_database = master, check_expiration = off,
 	check_policy = off
