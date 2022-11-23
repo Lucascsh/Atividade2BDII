@@ -8,3 +8,4 @@
     -> Criar usuáros para o banco selecionado
     -> Alterar permissões dos usuários selecionados (GRANT, DENY e REVOKE)
     -> Modificação: campo extra para informar o servidor, por padrão está o localhost
+    -> Onde paramos: criar outro método para executar querys que não consultam
