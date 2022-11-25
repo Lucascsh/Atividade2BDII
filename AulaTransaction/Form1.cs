@@ -43,7 +43,7 @@ namespace AulaTransaction
                     MessageBox.Show("Conectado com Sucesso.");
                 }
                 bConsultar.Enabled = true;
-
+                bListarLogins.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -139,8 +139,8 @@ namespace AulaTransaction
         {
             stringConec = "Data Source=" + tBServidor.Text + ";" +
             "Initial Catalog=" + tBBancoCriar.Text + ";" +
-            "User ID=" + tBLoginCriar.Text + ";" +
-            "password=" + tBSenhaCriar.Text + ";" +
+            "User ID=sa;" +
+            "password=laboratorio;" +
             "language=Portuguese";
 
             Banco bd = new Banco();
@@ -149,6 +149,7 @@ namespace AulaTransaction
             {
                 bd.setConec(stringConec);
                 SqlConnection cn = bd.abrirConexao();
+                bd.executaComando("create user " + tBUsuarioCriar.Text + " for login " + tBVinculaLogin.Text);
                 if (cn == null)
                 {
                     MessageBox.Show("Erro ao conectar com o banco!");
@@ -160,8 +161,6 @@ namespace AulaTransaction
                 MessageBox.Show("Erro ao conectar com o banco: " + ex.Message);
             }
 
-            bd.executaConsulta("" +
-                "create user " + tBUsuarioCriar.Text + " for login " + tBLoginCriar.Text);
             bd.fecharConexao();
         }
 
@@ -201,29 +200,25 @@ namespace AulaTransaction
                 SqlConnection cn = bd.abrirConexao();
                 if (cn == null)
                 {
-                    MessageBox.Show("Erro ao conectar com o banco!");
+                    MessageBox.Show("Erro ao conectar com o banco 1!");
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao conectar com o banco: " + ex.Message);
+                MessageBox.Show("Erro ao conectar com o banco 2: " + ex.Message);
             }
 
-            bd.executaConsulta("create login " + tBLoginCriar.Text + " with password =\'" + tBSenhaCriar.Text + "\', " +
+            bd.executaComando("create login " + tBLoginCriar.Text + " with password =\'" + tBSenhaCriar.Text + "\', " +
                 "default_database = master, " +
                 "check_expiration = off, " +
                 "check_policy = off");
             bd.fecharConexao();
+        }
 
-            /*
+        private void bListarLogins_Click(object sender, EventArgs e)
+        {
             Banco bd = new Banco();
-
-            stringConec = "Data Source=" + tBServidor.Text + ";" +
-            "Initial Catalog=master;" +
-            "User ID=" + tBUsuario.Text + ";" +
-            "password=" + tBSenha.Text + ";" +
-            "language=Portuguese";
 
             try
             {
@@ -233,26 +228,62 @@ namespace AulaTransaction
                 {
                     MessageBox.Show("Erro ao conectar com o banco!");
                 }
-                else
-                {
-                    MessageBox.Show("Conectado com Sucesso.");
-                }
-                bConsultar.Enabled = true;
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao conectar com o banco: " + ex.Message);
             }
-            finally
-            {
-                bd.fecharConexao();
-            } 
-            */
 
-            //create login super with password = '123456',
-            //default_database = master, check_expiration = off,
-            //check_policy = off
+            DataTable dt = new DataTable();
+
+            dt = bd.executaConsulta("select name, is_disabled, create_date from sys.sql_logins");
+
+            dataGridView1.DataSource = dt;
+
+            bd.fecharConexao();
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bPerm_Click(object sender, EventArgs e)
+        {
+            stringConec = "Data Source=" + tBServidor.Text + ";" +
+            "Initial Catalog=" + tBBancoPerm.Text + ";" +
+            "User ID=sa;" +
+            "password=laboratorio;" +
+            "language=Portuguese";
+            
+            Banco bd = new Banco();
+
+            try
+            {
+                //--deny select on disciplinas to username
+                bd.setConec(stringConec);
+                SqlConnection cn = bd.abrirConexao();
+                bd.executaComando(cBPerm.Items[cBPerm.SelectedIndex].ToString() + " " + cBComm.Items[cBComm.SelectedIndex].ToString() + " on " + tBTabelaPerm.Text + " to " + tBUsuarioPerm.Text);
+                if (cn == null)
+                {
+                    MessageBox.Show("Erro ao conectar com o banco 1!");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao conectar com o banco 2: " + ex.Message);
+            }
+
+            bd.fecharConexao();
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
+

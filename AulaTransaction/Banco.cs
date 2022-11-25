@@ -97,5 +97,24 @@ namespace AulaTransaction
             }
         }
 
+        public void executaComando(string sql)
+        {
+            try
+            {
+                abrirConexao();
+
+                SqlCommand comando = new SqlCommand(sql, cn);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+            finally
+            {
+                fecharConexao();
+            }
+        }
     }
 }
